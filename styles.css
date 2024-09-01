@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 80%;
+    align-items: center;
+}
+
+.timeline-entry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-entry span {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #007bff;
+    border-radius: 50%;
+    background-color: white;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-entry.active .circle {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.progress-segment {
+    width: calc(100% / 7 - 40px);
+    height: 4px;
+    background-color: #e0e0e0;
+    position: relative;
+}
+
+.progress-segment::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 0;
+    background-color: #007bff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.5s ease-in-out;
+}
+
+.progress-segment.filled::before {
+    width: 100%;
+}
+
+#content-area {
+    padding: 40px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transform-origin: center;
+}
+
+#content-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.zoom-out {
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+.zoom-in {
+    transform: scale(1);
+    opacity: 1;
+}

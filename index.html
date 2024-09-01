@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline with Progress Bar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="timeline-container">
+        <div class="timeline">
+            <div class="timeline-entry" data-year="2018" onclick="showContent('2018', this, 0)">
+                <div class="circle"></div>
+                <span>April 2018</span>
+            </div>
+            <div class="progress-segment"></div>
+
+            <div class="timeline-entry" data-year="2019" onclick="showContent('2019', this, 1)">
+                <div class="circle"></div>
+                <span>April 2019</span>
+            </div>
+            <div class="progress-segment"></div>
+
+            <div class="timeline-entry" data-year="2020" onclick="showContent('2020', this, 2)">
+                <div class="circle"></div>
+                <span>April 2020</span>
+            </div>
+            <div class="progress-segment"></div>
+
+            <div class="timeline-entry" data-year="2021" onclick="showContent('2021', this, 3)">
+                <div class="circle"></div>
+                <span>April 2021</span>
+            </div>
+            <div class="progress-segment"></div>
+
+            <div class="timeline-entry" data-year="2022" onclick="showContent('2022', this, 4)">
+                <div class="circle"></div>
+                <span>April 2022</span>
+            </div>
+            <div class="progress-segment"></div>
+
+            <div class="timeline-entry" data-year="2023" onclick="showContent('2023', this, 5)">
+                <div class="circle"></div>
+                <span>April 2023</span>
+            </div>
+            <div class="progress-segment"></div>
+
+            <div class="timeline-entry" data-year="2024" onclick="showContent('2024', this, 6)">
+                <div class="circle"></div>
+                <span>April 2024</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="content-area" class="zoom-in">
+        <img id="content-image" src="./images/images.jpeg" alt="April 2018 Image">
+        <h1 id="content-title">April 2018</h1>
+        <p id="content-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has 
+            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+            and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap 
+            into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+             of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like 
+             Aldus PageMaker including versions of Lorem Ipsum</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
